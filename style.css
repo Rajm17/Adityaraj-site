@@ -1,0 +1,176 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .header img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .nav a:hover {
+    color: #000;
+  }
+  
+  main {
+    padding: 50px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem; /* Increase heading size */
+  }
+  
+  .about p,
+  .location p {
+    line-height: 1.5;
+  }
+  
+  .amenities ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .contact label {
+    margin-bottom: 5px;
+  }
+  
+.contact-inputs {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .contact button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Add some basic responsiveness */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header img {
+      margin-bottom: 15px;
+    }
+  
+    .nav {
+      text-align: center;
+    }
+  
+    .nav li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+.main-info {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#img-container2 {
+    text-align: center;
+}
+
+#img2 {
+    width: 80%;
+    min-width: 600px;
+    margin: 10px;
+    max-height: 500px;
+}
+
+#project-details-container {
+    width: 50%;
+    margin: 10px;
+}
+
+.highlight-point {
+    font-size: larger;
+    margin: 5px;
+    text-align: start;
+}
+
+#about-project {
+    display: block;
+}
+
+#disclaimer {
+    margin: 10px;
+}
+
+#contact {
+    margin: 50px;
+}
+
+/* /* html {
+    margin: 0px;
+    background: red;
+} 
+
+body {
+    margin: 0px;
+}
+
+.top-part {
+    display: flex;
+    width: 100%;
+    background: bisque;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 80vh;
+}
+
+#project-info {
+    margin: 20px;
+    background: skyblue;
+    width: 50%;
+}
+
+#project-image {
+    width: 50%;
+    background: yellow;
+} */
