@@ -13,7 +13,7 @@ html {
 }
 
 #building-img {
-    height: 550px;
+    height: 600px;
 }
 
 #project-details-container {
@@ -80,6 +80,7 @@ html {
 }
 
 .contact {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -97,3 +98,33 @@ html {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#phone-error {
+    color: red;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .main-info {
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        padding-inline: 20px;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .left-part {
+        width: 100%;
+    }
+
+    .right-part {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    
+
+  }
