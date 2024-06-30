@@ -76,7 +76,7 @@ function handleFormSubmit(event) {
   var data = formData.data;
 
   pauseButtonDuringRequest(form, true);
-  var url = "https://script.google.com/macros/s/AKfycbx3Hkry71vVkiKa87beijZuVwJXscgT4_GEw6EqPt3u5F_OVzP7CJx7PWXd547xYWspkw/exec";
+  var url = "https://script.google.com/macros/s/AKfycbwpWqJDsz_EDsLgDFiaD88ydOJur212I_o-FFkLOJ6MGlqeWenAUcCU1ZKMSd9vDUZPqg/exec";
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
