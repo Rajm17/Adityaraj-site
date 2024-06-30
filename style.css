@@ -92,17 +92,6 @@ html {
     cursor: pointer;
 }
 
-#phone-error {
-    color: red;
-    visibility: hidden;
-}
-
-
-#popup-phone-error {
-    color: red;
-    visibility: hidden;
-}
-
 #logo {
     width: 40px;
     height: 30px;
