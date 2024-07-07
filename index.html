@@ -215,7 +215,7 @@
             <section id="contact" class="contact">
                 <h2>Schedule Free Visit</h2>
                 <p>Interested in learning more? Contact our team today!</p>
-                <form class="contact_form" id="contact-form">
+                <form class="contact_form" id="contact-form" action="">
                     <label for="name">Name:</label>
                     <input name="full_name" class="contact-inputs" type="text" id="name"
                         placeholder="Enter your Full Name" required>
@@ -230,10 +230,30 @@
                         autocomplete="off" />
                     <p class="thankyou_message" style="display: none;">Thank You. We will contact you shortly.</p>
                 </form>
+    
             </section>
         </div>
 
+        <div class="main-info" style="margin-top: 0px;">
+            <h4><img src="./images/icons/phone.svg" alt="phone">+91 74004 14236</h4>
+        </div>
+
+        <div style="text-align: center; font-size: x-large; padding: 20px; margin-top: 20px;">
+
+            <h2>Contact Us For:</h2>
+            
+            <div style="display: flex; justify-content: space-around; padding: 20px;">
+            <div><img src="./images/icons/callback.svg" alt="instant callback"><p>Instant Callback</p></div>
+            <div><img src="./images/icons/location_point.svg" alt="free site visit"><p>Free Site Visit</p></div>
+            <div><img src="./images/icons/rupee.svg"><p>Umatched Price</p></div>
+            </div>
+    
+        </div>
     </div>
+
+
+
+
 
     <div id="disclaimer" style="font-size: xx-small;">
         <p>
@@ -245,6 +265,7 @@
         </p>
 
         <p>MAHARERA NO. P51800055402 https://maharera.maharashtra.gov.in/</p>
+        <a href="./policy.html">Privacy policy | Terms and Conditions</a>
     </div>
 
     <a href="#" id="move-top">
@@ -262,8 +283,8 @@
             <p>&#10006;</p>
         </button>
         <section id="contact" class="contact">
-            <h2>Please fill the form to get details</h2>
-            <form class="contact_form" id="popup-contact-form" action="https://submit-form.com/ArzGH7VP3">
+            <h2>Request Detailed Project Information!</h2>
+            <form class="contact_form" id="popup-contact-form" action="">
                 <label for="name">Name:</label>
                 <input name="full_name" class="contact-inputs" type="text" id="popup-name"
                     placeholder="Enter your full Name" required>
@@ -274,11 +295,15 @@
                 <input name="phone_number" class="contact-inputs" type="number" id="popup-phone"
                     placeholder="Enter your Phone no." 
                     required>
-                <button type="submit">Get in Touch</button>
+                <button type="submit">Request Now</button>
                 <input name="_protect" type="checkbox" tabindex="-1" style="display:none" autocomplete="off" />
                 <p class="thankyou_message" style="display: none;">Thank You. We will contact you shortly.</p>
             </form>
         </section>
+    </div>
+
+    <div class="alert alert-success" role="alert" id="thankyou_msg_div">
+        <h2>Thank You! Our Team will contact you shortly.</h2>
     </div>
 
 </body>
