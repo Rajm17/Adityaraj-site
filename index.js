@@ -1,3 +1,6 @@
+const maxformsubmit = 2;
+let formsubmitcount = 0;
+
 function loaded() {
   document.getElementById('contact-form').addEventListener("submit", handleFormSubmit);
   document.getElementById('popup-contact-form').addEventListener("submit", handlePopupForm);
@@ -6,6 +9,8 @@ function loaded() {
 };
 
 document.addEventListener("DOMContentLoaded", loaded, false);
+
+let popupTimeout = setTimeout(openPopupForm, 20000);
 
 // Handlers move-to-top and whatsapp chat function
 window.addEventListener('scroll', function () {
@@ -63,43 +68,52 @@ function getFormData(form) {
   return { data: formData, honeypot: honeypot };
 }
 
-
 function handleFormSubmit(event) {
   event.preventDefault();
+  clearTimeout(popupTimeout);
   var form = event.target;
   var formData = getFormData(form);
+  let timeout = 2000;
 
-  if (formData == null || formData.honeypot) {
-    return;
-  }
+  if (formsubmitcount < maxformsubmit && !formData.honeypot) {
 
-  var data = formData.data;
+    var data = formData.data;
 
-  pauseButtonDuringRequest(form, true);
-  var url = "https://script.google.com/macros/s/AKfycbwpWqJDsz_EDsLgDFiaD88ydOJur212I_o-FFkLOJ6MGlqeWenAUcCU1ZKMSd9vDUZPqg/exec";
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      form.reset();
-      var thankYouMessage = form.querySelector(".thankyou_message");
-      if (thankYouMessage) {
-        thankYouMessage.style.display = "block";
-      }
+    pauseButtonDuringRequest(form, true);
+    var url = "https://script.google.com/macros/s/AKfycbwpWqJDsz_EDsLgDFiaD88ydOJur212I_o-FFkLOJ6MGlqeWenAUcCU1ZKMSd9vDUZPqg/exec";
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var thankYouMessage = form.querySelector(".thankyou_message");
+        if (thankYouMessage) {
+          thankYouMessage.style.display = "block";
+        }
+      } 
+    };
+    var encoded = Object.keys(data).map(function (k) {
+      return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+    }).join('&');
+
+    try {
+      // xhr.send(encoded);
+      formsubmitcount++;
+    } catch (error) {
     }
     pauseButtonDuringRequest(form, false);
-  };
-  var encoded = Object.keys(data).map(function (k) {
-    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-  }).join('&');
-
-  try {
-    console.log(encoded);
-    xhr.send(encoded);
-  } catch (error) {
-    console.log(error);
+  } else {
+    document.getElementById('thankyou_msg_div').innerHTML = "You have exceeded form submission limit! Please Contact us on mentioned Whatsapp number, to get details about project."
+    timeout = 5000;
   }
+  form.reset();
+  document.getElementById('thankyou_msg_div').style.display = "block";
+  setTimeout(closeThankyouPopup, timeout);
+}
+
+
+function closeThankyouPopup() {
+  document.getElementById('thankyou_msg_div').style.display = "none";
 }
 
 function handlePopupForm(event) {
@@ -124,3 +138,4 @@ function pauseButtonDuringRequest(form, isPause) {
     buttons[i].disabled = isPause;
   }
 }
+

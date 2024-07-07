@@ -1,5 +1,5 @@
 body {
-    background: #e6e6fa;
+    background: #f0f0fd;
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -17,6 +17,15 @@ html {
 
 #building-img {
     height: 600px;
+}
+
+#thankyou_msg_div {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
 #banner-img {
