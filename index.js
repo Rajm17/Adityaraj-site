@@ -80,7 +80,7 @@ function handleFormSubmit(event) {
     var data = formData.data;
 
     pauseButtonDuringRequest(form, true);
-    var url = "https://script.google.com/macros/s/AKfycbwpWqJDsz_EDsLgDFiaD88ydOJur212I_o-FFkLOJ6MGlqeWenAUcCU1ZKMSd9vDUZPqg/exec";
+    var url = "https://script.google.com/macros/s/AKfycbxZ5DYeLuluXUHgPOJeg-HTXsxNI9HKkA4ZnXrol8P78VP17IasbljY_0VyS9QmwjlBOA/exec";
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -96,8 +96,10 @@ function handleFormSubmit(event) {
       return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
     }).join('&');
 
+    console.log(encoded);
+
     try {
-      // xhr.send(encoded);
+      xhr.send(encoded);
       formsubmitcount++;
     } catch (error) {
     }
