@@ -2,6 +2,7 @@ body {
     background: #f0f0fd;
     max-width: 100%;
     overflow-x: hidden;
+    
 }
 
 html {
@@ -13,6 +14,13 @@ html {
 .img {
     width: 100%;
     height: 400px;
+}
+
+.info-img {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    height: 200px;
 }
 
 #building-img {
@@ -62,7 +70,17 @@ html {
     font-size: larger;
     margin: 5px;
     text-align: start;
+    list-style-type: '✓  ';
 }
+/* 
+.highlight-point::before {
+    content: "✓";
+    margin-right: 5px; /* Adjust spacing */
+  }
+
+ul {
+    list-style: none;
+} */
 
 #about-project {
     font-size: larger;
@@ -122,6 +140,7 @@ html {
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    width: 35%;
 }
 
 #popup-overlay {
@@ -207,6 +226,10 @@ html {
     html, body {
         max-width: 100%;
         overflow-x: hidden;
+    }
+
+    #our-perks {
+        flex-direction: column;
     }
 
 }
