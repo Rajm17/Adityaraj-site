@@ -11,6 +11,10 @@ html {
     overflow-x: hidden;
 }
 
+.carousel {
+    height: 20%;
+}
+
 .img {
     width: 100%;
     height: 400px;
@@ -23,10 +27,6 @@ html {
     height: 200px;
 }
 
-#building-img {
-    height: 600px;
-}
-
 #thankyou_msg_div {
     display: none;
     position: fixed;
@@ -36,12 +36,8 @@ html {
     z-index: 1000;
 }
 
-#banner-img {
+.banner-img {
     height: 800px;
-}
-
-#project-details-container {
-    padding-inline: 15px;
 }
 
 .main-info {
@@ -62,13 +58,9 @@ html {
     margin-left: 10px;
 }
 
-#img-container2 {
-    text-align: center;
-}
-
 .highlight-point {
     font-size: larger;
-    margin: 5px;
+    margin: 20px auto;
     text-align: start;
     list-style-type: '✓  ';
 }
@@ -199,6 +191,10 @@ ul {
 
 @media only screen and (max-width: 500px) {
 
+    .banner-img {
+        height: 500px;
+    }
+
     .main-info {
         display: block;
         width: 100%;
@@ -213,10 +209,6 @@ ul {
     .right-part {
         margin: 20px auto;
         width: 100%;
-    }
-
-    #banner-img {
-        display: none;
     }
 
     #popup-form-container {
