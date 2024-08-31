@@ -1,0 +1,81 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .property-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .property-image {
+            width: 100%;
+            height: 300px;
+            background: url('adityaraj-ease-nest/images/2.jpg') center/cover no-repeat;
+            cursor: pointer;
+            filter: blur(5px);
+            transition: filter 0.3s;
+        }
+        .property-image:hover {
+            filter: blur(3px);
+        }
+        .property-details {
+            padding: 20px;
+        }
+        .property-title {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+        .property-description {
+            font-size: 16px;
+            color: #666;
+        }
+        .contact-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container input, .form-container textarea {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background: #28a745;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
