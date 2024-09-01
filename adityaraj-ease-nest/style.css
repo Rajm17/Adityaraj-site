@@ -37,7 +37,7 @@ html {
 }
 
 .banner-img {
-    height: 800px;
+    height: 700px;
 }
 
 .main-info {
@@ -64,15 +64,6 @@ html {
     text-align: start;
     list-style-type: '✓  ';
 }
-/* 
-.highlight-point::before {
-    content: "✓";
-    margin-right: 5px; /* Adjust spacing */
-  }
-
-ul {
-    list-style: none;
-} */
 
 #about-project {
     font-size: larger;
