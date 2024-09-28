@@ -96,12 +96,8 @@ function handleFormSubmit(event) {
       return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
     }).join('&');
 
-    console.log(encoded);
-
     try {
-      console.log(encoded);
-      
-      // xhr.send(encoded);
+      xhr.send(encoded);
       formsubmitcount++;
     } catch (error) {
     }
