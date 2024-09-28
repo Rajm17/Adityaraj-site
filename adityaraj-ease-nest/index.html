@@ -231,7 +231,7 @@
             </div>
 
         <div class="main-info">
-            <section id="contact" class="contact">
+            <section class="contact" id="page-contact">
                 <h3>Schedule Free Visit</h3>
                 <p>Interested to know more? Contact our team today and get brochure!</p>
                 <form class="contact_form" id="contact-form" action="">
@@ -242,13 +242,16 @@
                     <input name="email" class="contact-inputs" type="email" id="email" placeholder="Enter your Email (optional)">
                     <label for="phone"><b>Phone:</b></label>
                     <input name="phone_number" class="contact-inputs" type="number" id="phone"
-                        placeholder="Enter your Phone no." pattern="/^\+?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/"
+                        placeholder="Enter your Phone no."
                         required>
                     <button type="submit">Get in Touch</button>
+                    <label for="consent" class="consent">
+                        <input type="checkbox" name="consent" checked required>
+                        I consent to the use of my contact details as per <a href="../policy.html">Privacy Policy</a>
+                      </label>
                     <input type="checkbox" name="_protect" style="display:none" tabindex="-1"
                         autocomplete="off" />
                     <p class="thankyou_message" style="display: none;">Thank You. We will contact you shortly.</p>
-                    <p style="padding: 10px; text-align: center;">Your contact details will be used solely to respond to your inquiry. We value your privacy and will never spam you or share your information.</p>
                 </form>
                 
             </section>
@@ -282,14 +285,13 @@
     <div id="disclaimer" style="font-size: xx-small;">
         <p>
             Disclaimer: 
-            It belongs to builder registered marketing Partner - MAHARERA No.A51900039899 and is used for information purposes only.
-            The content is for information purposes only and does not constitute an offer to avail of any
-            service. Prices mentioned are subject to change without notice and properties mentioned are subject to
-            availability. images for representation purposes only. We may send updates to the mobile number registered with us. All
-            Rights Reserved. We don't charge clients for consultation  and site visits.
+            This website belongs to builder registered channel Partner - <b>MAHARERA No.A51900039899</b>.
+            The content is for information purposes only. Prices mentioned are subject to change without notice and properties mentioned are subject to
+            availability. We may send updates to the mobile number registered with us. All
+            Rights Reserved. We don't charge clients for consultation  and site visits. Your contact details will be used solely to respond to your inquiry. We value your privacy and will never spam you or share your information.
         </p>
 
-        <p>MAHARERA NO. P51800055402 https://maharera.maharashtra.gov.in/</p>
+        <p>Project MAHARERA NO. <b>P51800055402</b> https://maharera.maharashtra.gov.in/</p>
         <a href="./../policy.html">Privacy policy | Terms and Conditions</a>
     </div>
 
@@ -321,9 +323,12 @@
                     placeholder="Enter your Phone no." 
                     required>
                 <button type="submit">Enquire Now</button>
+                <label for="consent" class="consent">
+                    <input type="checkbox" name="consent" checked required>
+                    I consent to the use of my contact details as per <a href="../policy.html">Privacy Policy</a>
+                  </label>
                 <input name="_protect" type="checkbox" tabindex="-1" style="display:none" autocomplete="off" />
                 <p class="thankyou_message" style="display: none;">Thank You. We will contact you shortly.</p>
-                <p style="padding: 10px; text-align: center;">Your contact details will be used solely to respond to your inquiry. We value your privacy and will never sell or share your information.</p>
             </form>
         </section>
     </div>
