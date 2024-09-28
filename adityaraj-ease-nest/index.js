@@ -99,7 +99,9 @@ function handleFormSubmit(event) {
     console.log(encoded);
 
     try {
-      xhr.send(encoded);
+      console.log(encoded);
+      
+      // xhr.send(encoded);
       formsubmitcount++;
     } catch (error) {
     }
@@ -126,7 +128,7 @@ function handlePopupForm(event) {
 
 function phoneNumberValidation(ev) {
   const input = ev.target;
-  const indianPhoneRegex = /^[6-789]\d{9}$/;
+  const indianPhoneRegex = /^[6-789]\d{9}|\+91[6-789]\d{9}|0[6-789]\d{9}|\+91 [6-789]\d{9}$/;
   if (!indianPhoneRegex.test(input.value)) {
     input.setCustomValidity("Invalid phone number. Please enter valid 10-digit number");
   } else {
